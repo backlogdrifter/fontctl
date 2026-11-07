@@ -1,7 +1,6 @@
 # fontctl
 
-<img width="1862" height="2070" alt="Screenshot 2026-11-07 at 23 30 04" src="https://github.com/user-attachments/assets/91db51e2-3e4c-4c3e-a66f-1e1f5f8ea497" />
-
+<img width="1862" height="2070" alt="Screenshot 2026-11-07 at 23 31 11" src="https://github.com/user-attachments/assets/e8d766f1-ae4e-4ace-b11f-993cc925eede" />
 
 `fontctl` manages macOS font registrations with CoreText. It reads OTF and TTF
 files directly from a chosen collection without copying them into a system font
