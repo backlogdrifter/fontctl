@@ -11,6 +11,24 @@ directory or running a background service.
 - macOS 13 or later
 - Swift 5.9 or later to build from source
 
+## Installation
+
+Install the Xcode Command Line Tools first if `swift --version` is unavailable: `xcode-select --install`. Then run:
+
+```sh
+curl -fL -o fontctl-1.2.4.tar.gz https://raw.githubusercontent.com/backlogdrifter/fontctl/main/fontctl-1.2.4.tar.gz
+tar -xzf fontctl-1.2.4.tar.gz
+cd fontctl-1.2.4
+swift build -c release --product fontctl
+mkdir -p "$HOME/.local/bin"
+install -m 755 .build/release/fontctl "$HOME/.local/bin/fontctl"
+ln -sf fontctl "$HOME/.local/bin/fctl"
+export PATH="$HOME/.local/bin:$PATH"
+fctl --version
+```
+
+To make the command available in new Terminal sessions, add `export PATH="$HOME/.local/bin:$PATH"` to `~/.zprofile` if that directory is not already in your PATH. Set your font collection with `fctl root set "/path/to/Fonts"`; installation alone does not register fonts.
+
 ## Build
 
 ```sh
@@ -41,8 +59,7 @@ fontctl authors
 fontctl sync
 ```
 
-`fontctl help` describes all commands and options. `fctl` is an equivalent
-short command when installed by the Homebrew formula.
+`fontctl help` describes all commands and options. The installation steps above also create the short `fctl` command.
 
 Each font family is a direct subfolder of the collection. Only OTF and TTF
 files directly inside those folders are scanned. Symlinks and nested folders
