@@ -6,6 +6,12 @@
 files directly from a chosen collection without copying them into a system font
 directory or running a background service.
 
+*I’m a designer, and I wanted a straightforward way to register fonts from a folder on macOS without copying them into a system Fonts directory. So I built **fontctl**.*
+
+*It’s a lightweight CLI written in Swift, using CoreText to register fonts in place. No file copying, no background processes—just a focused tool that does one job.*
+
+*Built with the help of Codex, used in my daily workflow, and now open source.*
+
 ## Requirements
 
 - macOS 13 or later
